@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ProjectTest.ViewModels" 
+             x:Class="ProjectTest.Pages.MainPage">
+
+    
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource StackForm}">
+            <StackLayout  >
+                <StackLayout Style="{StaticResource StackEntry}">
+                    <Entry Keyboard="Email" Style="{StaticResource EntryLogin}" Text="{Binding Username}" Placeholder="Username">
+                    </Entry>
+                </StackLayout>
+                <StackLayout Style="{StaticResource StackEntry}">
+                    <Entry Style="{StaticResource EntryLogin}" Keyboard="Default" IsPassword="True" 
+                           Text="{Binding Password}" Placeholder="Password">
+                    </Entry>
+                </StackLayout>
+                <Button Text="LOG IN" Style="{StaticResource BtnPrimary}" Command="{Binding SignIn}">
+                </Button>
+
+                <Button Text="SIGN UP" Style="{StaticResource BtnSecondary}" Command="{Binding SignUp}">
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

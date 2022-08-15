@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ProjectTest" 
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
+             x:Class="ProjectTest.Pages.ProductPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="15">
+                <Image Source="{Binding product.image}"></Image>
+
+                <Label Text="Product Name" FontAttributes="Bold" ></Label>
+                <Editor Text="{Binding product.title}"></Editor>
+
+                <Label Text="Price" FontAttributes="Bold" ></Label>
+                <Editor Text="{Binding product.price}"></Editor>
+
+                <Label Text="Category" FontAttributes="Bold" ></Label>
+                <Editor Text="{Binding product.category}"></Editor>
+
+                <Label Text="Rating" FontAttributes="Bold" ></Label>
+                <Editor Text="{Binding product.rating.rate}"></Editor>
+
+                <Label Text="Description" FontAttributes="Bold" ></Label>
+                <Editor  Text="{Binding product.description}" IsEnabled="False"></Editor>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
